@@ -1,70 +1,80 @@
-# Hi, I'm Himanshu Bharti 👋
+Hi, I'm Himanshu Bharti 👋
 
-Software Engineer @ Mobiloitte
+Software Engineer | AI Engineer | Backend Developer
 
-I build AI-powered applications, RAG systems, intelligent chatbots, and scalable backend solutions using modern technologies.
+Building production-grade AI applications, scalable backend systems, and enterprise automation platforms using Python, Java, FastAPI, Spring Boot, and modern cloud technologies.
 
-## 🚀 About Me
+🚀 About Me
 
-- 💻 Software Engineer specializing in AI and Full-Stack Development
-- 🤖 Building RAG & LLM-powered applications
-- ⚡ Developing scalable APIs with FastAPI
-- 🌐 Creating modern web applications with React
-- 🔍 Interested in AI Agents, Automation, and Enterprise Solutions
+- Software Engineer at Mobiloitte
+- Specialized in AI Agents, Large Language Models (LLMs), and Retrieval-Augmented Generation (RAG)
+- Experienced in designing scalable backend architectures and multi-tenant SaaS platforms
+- Building enterprise AI solutions, workflow automation systems, and intelligent document processing platforms
+- Passionate about Distributed Systems, System Design, AI Infrastructure, and Cloud Technologies
 
-## 🛠️ Tech Stack
+🛠️ Tech Stack
 
-### Backend
-- Python
-- FastAPI
-- Node.js
-- REST APIs
+Languages
 
-### Frontend
-- React.js
-- Next.js
-- JavaScript
-- HTML & CSS
+Python • Java • JavaScript • SQL
 
-### AI & Machine Learning
-- LangChain
-- RAG
-- LLM Integrations
-- Sentence Transformers
-- FAISS
-- Pinecone
+Backend & APIs
 
-### Database & Cloud
-- PostgreSQL
-- MySQL
-- MongoDB
-- Docker
-- AWS
+FastAPI • Spring Boot • REST APIs • WebSockets • JWT • RBAC
 
-## 📌 Current Focus
+AI & GenAI
 
-- AI Agents
-- Multi-Tenant RAG Systems
-- Enterprise AI Applications
-- WhatsApp Automation
-- Knowledge Base Chatbots
+LLMs • LangChain • RAG • AI Agents • FAISS • Pinecone • Vector Databases • Prompt Engineering
 
-## 🔥 Featured Projects
+Databases
 
-### AI Knowledge Base Chatbot
-Document-based question-answering system using FastAPI, LangChain, FAISS, and LLMs.
+PostgreSQL • MySQL • MongoDB • Redis
 
-### WhatsApp AI Automation
-Automated customer support and lead management platform with WhatsApp integration.
+Cloud & DevOps
 
-### CRM & Lead Management System
-End-to-end CRM solution with chatbot integration and workflow automation.
+AWS • Docker • Git • CI/CD
 
-## 📫 Connect With Me
+🔥 Professional Highlights
 
-- LinkedIn: https://www.linkedin.com/in/himanshu-bharti-81a5a618a
-- GitHub: https://github.com/hkbharti77
+- Built production RAG systems with semantic search and vector retrieval
+- Developed AI-powered workflow automation platforms across multiple channels
+- Designed secure multi-tenant architectures with role-based access control
+- Optimized backend performance and scalable API services
+- Built enterprise applications integrating AI, automation, and business workflows
+
+📌 Current Focus
+
+- AI Agents & Agentic Workflows
+- Enterprise RAG Systems
+- Distributed Backend Architectures
+- Multi-Tenant SaaS Platforms
+- Generative AI Applications
+- System Design & Scalability
+
+🚀 Featured Projects
+
+Enterprise AI Platform
+
+Production-grade AI platform supporting intelligent document processing, conversational AI, and enterprise automation.
+
+Multi-Tenant RAG System
+
+Scalable Retrieval-Augmented Generation platform with secure tenant isolation and vector-based retrieval.
+
+AI-Powered CRM Automation
+
+Enterprise CRM solution integrating AI Agents, workflow automation, and customer engagement channels.
+
+📈 Career Interests
+
+Software Engineering • Backend Development • AI Engineering • Generative AI • Distributed Systems • Cloud Infrastructure
+
+📫 Connect With Me
+
+LinkedIn: linkedin.com/in/himanshu-bharti-81a5a618a
+
+GitHub: github.com/hkbharti77
 
 ---
 
-⭐ Always learning, building, and improving.
+⭐ Passionate about building scalable software, solving complex engineering problems, and leveraging AI to create impactful products.
