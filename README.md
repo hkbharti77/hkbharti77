@@ -1,13 +1,13 @@
 <div align="center">
 
 # Himanshu Bharti
-### **Systems & AI Engineer | Distributed Backend Architect**
+### **Systems & AI Engineer | Backend & Distributed Systems**
 
-[![Portfolio](https://img.shields.io/badge/Architecture_Portfolio-hkbharti77.website-0F172A?style=for-the-badge&logo=googlechrome&logoColor=38BDF8)](https://hkbharti77.website)
+[![Portfolio](https://img.shields.io/badge/Portfolio-hkbharti77.website-0F172A?style=for-the-badge&logo=googlechrome&logoColor=38BDF8)](https://hkbharti77.website)
 &nbsp;
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Himanshu_Bharti-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/himanshu-bharti-81a5a618a)
 &nbsp;
-[![Email](https://img.shields.io/badge/Direct_Contact-hkbharti77%40gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:hkbharti77@gmail.com)
+[![Email](https://img.shields.io/badge/Contact-hkbharti77%40gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:hkbharti77@gmail.com)
 &nbsp;
 [![GitHub](https://img.shields.io/badge/GitHub-hkbharti77-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/hkbharti77)
 
@@ -15,9 +15,9 @@
 
 ```text
 ┌────────────────────────────────────────────────────────────────────────────┐
-│  CORE DOMAIN: High-Throughput Distributed Backends & Production GenAI      │
-│  INVARIANT  : Deterministic State Graphs > Stochastic Prompts              │
-│  BENCHMARK  : Sub-500ms Real-Time Voice Pipelines | Zero-Downtime Microservices │
+│  CORE DOMAIN : High-Performance Backends, Conversational AI & Hybrid RAG   │
+│  INVARIANT   : Bounded State Machines > Uncontrolled Stochastic Loops      │
+│  OBJECTIVE   : Low-Latency Streaming, Idempotent APIs & Reliable Services  │
 └────────────────────────────────────────────────────────────────────────────┘
 ```
 
@@ -27,153 +27,178 @@
 
 ## ⚡ Executive Profile
 
-I am a **Systems & AI Engineer** focused on designing, deploying, and scaling resilient distributed backends, autonomous multi-agent state machines, and high-performance AI retrieval infrastructure.
+I am a **Systems & AI Engineer** specializing in backend development, distributed service integration, and production-grade conversational AI workflows.
 
-My engineering practice sits at the intersection of **low-latency systems programming** (sub-millisecond streaming protocols, audio buffering, concurrency economics) and **production GenAI systems** (state-graph orchestration, hybrid dense-sparse vector grounding, and deterministic guardrails).
+My work centers on building scalable REST and streaming services, structured multi-agent state machines, and evidence-grounded Retrieval-Augmented Generation (RAG) systems. I focus on end-to-end reliability: designing resilient relational models, implementing idempotent event handlers, enforcing strict schema validation, and optimizing data retrieval pipelines.
 
-* **Architectural Focus:** Distributed event-driven systems, LangGraph deterministic state charts, WebRTC sub-500ms full-duplex voice pipelines, and multi-tenant RAG systems with verified citation provenance.
-* **Production Standards:** P99 latency SLA enforcement, strict schema validation (Pydantic / Zod), distributed idempotency locks, and zero-data-loss failover topologies.
-* **Current Engagement:** Systems & AI Engineer — architecting enterprise automation platforms, conversational AI pipelines, and high-scale multi-tenant SaaS engines.
-* **Portfolio & Writing:** [hkbharti77.website](https://hkbharti77.website)
+* **Primary Stack:** Python (FastAPI, AsyncIO), Java (Spring Boot), PostgreSQL, Redis, Docker.
+* **AI & Retrieval Focus:** Agentic state machines (LangGraph), hybrid dense-sparse retrieval (pgvector + full-text search), streaming STT/TTS integration, and citation validation.
+* **Systems Discipline:** API contract enforcement (Pydantic / Zod), distributed locking, tenant isolation, and measurement-driven latency reduction.
+* **Portfolio & Dispatches:** [hkbharti77.website](https://hkbharti77.website)
 
 ---
 
 ## 🏗️ System Architecture Showcase
 
-### 01. Sub-500ms Full-Duplex Real-Time Voice Agent Pipeline
+### 01. Real-Time Streaming Voice AI Pipeline
 
 ```mermaid
 flowchart LR
-    subgraph ClientTransport ["Client & Network Layer"]
-        User((User Audio)) -->|48kHz WebRTC| JitterBuf[Dynamic Jitter Buffer]
-        JitterBuf -->|PCM Chunks| VAD[Silero VAD / 30ms Slices]
+    subgraph Ingestion ["1. Audio Capture & Transport"]
+        A[Client Microphone] -->|WebRTC / Opus| B[Dynamic Jitter Buffer]
+        B -->|Decoded PCM| C[Voice Activity Detection / VAD]
     end
 
-    subgraph InferenceCore ["Streaming AI Engine"]
-        VAD -->|Speech Boundary| STT[Deepgram Nova-2 / ~140ms]
-        STT -->|Interim Tokens| AgentRouter{LangGraph State Router}
-        AgentRouter -->|Deterministic Step| LLM[Claude 3.5 Sonnet / SSE]
-        LLM -->|Chunked Tokens| TTS[ElevenLabs Turbo v2]
+    subgraph StreamingCore ["2. Streaming Inference Pipeline"]
+        C -->|Audio Chunks / 20-30ms| D[Streaming STT Engine]
+        D -->|Interim Transcripts| E[Session & Agent Orchestrator]
+        E -->|Context & Structured Prompt| F[Streaming LLM Generation]
+        F -->|Token Stream / SSE| G[Streaming TTS Engine]
     end
 
-    subgraph DownstreamAudio ["Audio Synthesis & Feedback"]
-        TTS -->|Opus Packets| RingBuffer[Circular Ring Buffer]
-        RingBuffer -->|Audio Out| Speaker((Client Playback))
-        Speaker -.->|Interruption Event| VAD
+    subgraph Playback ["3. Audio Delivery"]
+        G -->|Audio Chunks| H[Audio Buffer / Queue]
+        H -->|WebRTC / WebSocket Stream| I[Client Speaker Playback]
+        I -.->|Barge-in / Interruption Event| C
     end
 
-    style InferenceCore fill:#0f172a,stroke:#38bdf8,stroke-width:1px,color:#fff
-    style ClientTransport fill:#1e293b,stroke:#64748b,stroke-width:1px,color:#fff
-    style DownstreamAudio fill:#1e293b,stroke:#64748b,stroke-width:1px,color:#fff
+    style Ingestion fill:#1e293b,stroke:#64748b,stroke-width:1px,color:#fff
+    style StreamingCore fill:#0f172a,stroke:#38bdf8,stroke-width:1px,color:#fff
+    style Playback fill:#1e293b,stroke:#64748b,stroke-width:1px,color:#fff
 ```
 
-* **Latency SLA:** `430ms` glass-to-glass round trip (Voice in → Processed token synthesis → Audio out).
-* **Interruption Handling:** Dynamic audio cancellation triggering upstream SSE cancellation token via WebRTC DataChannels.
+#### Latency Decomposition & Protocol Invariants
+* **Transport Optimization:** Uses WebRTC data and media channels to eliminate TCP connection setup and head-of-line blocking on audio packets. Note that while WebRTC minimizes transport overhead, total end-of-turn latency remains dominated by model compute (STT processing + LLM time-to-first-token + TTS chunk synthesis).
+* **Chunked Streaming:** Pipelining interim STT transcripts into the LLM and forwarding early token chunks to TTS overlap inference phases, reducing perceived turn turnaround time compared to sequential batch execution.
+* **Interruption Handling (Barge-In):** When client-side VAD detects user speech during playback, an explicit cancellation event aborts upstream LLM token generation and flushes downstream audio buffers.
 
 ---
 
-### 02. Enterprise Hybrid RAG & Verification Architecture
+### 02. Multi-Tenant Hybrid RAG & Verification Architecture
 
 ```mermaid
 flowchart TD
-    Query[Incoming Natural Language Query] --> PreProc[HyDE Query Expansion & Intent Classifier]
+    UserQuery[User Query] --> Preprocess[Query Preprocessing & Intent Routing]
+    Preprocess -.->|Optional| HyDE[Hypothetical Document Embeddings]
     
-    subgraph Retrieval ["Dual-Engine Retrieval"]
-        PreProc -->|Dense Vector| HNSW["pgvector HNSW (Cosine Cosim)"]
-        PreProc -->|Sparse Lexical| BM25["PostgreSQL GIN / BM25 Inverted Index"]
+    subgraph DualRetrieval ["Dual-Path Document Retrieval"]
+        Preprocess -->|Dense Vector Embedding| Dense["pgvector (Cosine Similarity / HNSW)"]
+        Preprocess -->|Lexical Query| Sparse["PostgreSQL Full-Text Search (tsvector / GIN)"]
     end
 
-    HNSW --> RRF[Reciprocal Rank Fusion / RRF Aggregator]
-    BM25 --> RRF
+    Dense --> Fusion[Rank Fusion / RRF Aggregation]
+    Sparse --> Fusion
 
-    RRF --> CrossEnc["Cohere Rerank v3 Cross-Encoder (Top-K Filter)"]
-    CrossEnc --> ContextGround[Strict Context Assembler + Citation Metadata]
-    ContextGround --> Guardrail{"Provenance & Hallucination Check"}
-    Guardrail -->|Pass: Confidence > 99%| Output[Structured Answer + Verifiable Provenance]
-    Guardrail -->|Fail: Ungrounded| Fallback[Safe Graceful Degradation / Human-in-Loop]
+    Fusion --> Rerank[Cross-Encoder Reranker / Top-K]
+    Rerank --> ContextAssembly[Context Assembly with Tenant Scoping & Source Metadata]
+    ContextAssembly --> Generation[LLM Synthesis with Grounding Constraints]
+    Generation --> Validation{"Evidence & Citation Verification"}
 
-    style Retrieval fill:#0f172a,stroke:#38bdf8,stroke-width:1px,color:#fff
-    style Guardrail fill:#334155,stroke:#f59e0b,stroke-width:1px,color:#fff
+    Validation -->|Supported Claims| Response[Structured Response with Source Citations]
+    Validation -->|Unsubstantiated / Missing Context| Abstention[Safe Abstention & Clarification Request]
+
+    style DualRetrieval fill:#0f172a,stroke:#38bdf8,stroke-width:1px,color:#fff
+    style Validation fill:#334155,stroke:#f59e0b,stroke-width:1px,color:#fff
 ```
+
+#### Retrieval Mechanics & Quality Controls
+* **Dense & Lexical Complementarity:** Dense vectors capture semantic intent, while PostgreSQL full-text search (`tsvector` + GIN inverted indexes) guarantees exact matches for product SKUs, legal references, and specific entity names.
+* **Rank Fusion & Re-Scoring:** Reciprocal Rank Fusion (RRF) standardizes scores across dense and lexical result sets before a cross-encoder model evaluates query-document relevance.
+* **Safe Abstention Over Hallucination:** The system validates that claims generated by the LLM map directly to retrieved chunk metadata; if evidence is insufficient, the system abstains rather than producing unsupported outputs.
 
 ---
 
-## 🛠️ Systems Matrix & Core Technical Stack
+## 🛠️ Technical Stack & Competency Matrix
 
-| Architectural Domain | Core Technologies & Frameworks | Production Implementations & Patterns |
+| Category | Primary Technologies | Application in Projects |
 | :--- | :--- | :--- |
-| **Agentic AI & Orchestration** | `LangGraph`, `LangChain`, `LlamaIndex`, `DSPy`, `OpenAI / Anthropic APIs` | Cyclic state charts, deterministic function routing, checkpointing with Redis, schema enforcement with Pydantic, prompt caching. |
-| **Distributed Systems & Backends** | `Python (FastAPI, AsyncIO)`, `Java (Spring Boot)`, `Go (Golang)`, `Node.js` | Asynchronous event loops, RESTful microservices, gRPC protocol buffers, WebSockets, WebRTC DataChannels. |
-| **Messaging & Event Streaming** | `Redis Streams`, `Kafka`, `Celery`, `BullMQ`, `RabbitMQ` | Event-driven decoupling, distributed task scheduling, webhook HMAC deduplication, at-least-once delivery guarantees. |
-| **Vector & Relational Storage** | `PostgreSQL (pgvector, HNSW)`, `MongoDB Atlas`, `Redis`, `MySQL`, `Pinecone` | Hybrid vector-lexical indexing, multi-tenant row-level security (RLS), ACID compliance, write-through caching. |
-| **Inference & Real-Time Audio** | `Deepgram Nova-2`, `ElevenLabs Turbo`, `Silero VAD`, `vLLM`, `HuggingFace` | Full-duplex audio streaming, interim token parsing, continuous voice activity detection, Web Audio ring buffering. |
-| **Cloud, DevOps & Observability** | `AWS (ECS, Lambda, S3, RDS)`, `Docker`, `Kubernetes (EKS)`, `Nginx`, `CI/CD` | Multi-stage container builds, automated regression & linting pipelines, Prometheus & OpenTelemetry instrumentation. |
+| **Core & Demonstrable**<br/>*(Production & Daily Stack)* | `Python`, `FastAPI`, `AsyncIO`, `Java`, `Spring Boot`, `PostgreSQL`, `pgvector`, `Redis`, `REST APIs`, `WebSockets`, `Docker`, `Git` | Designing asynchronous microservices, building relational and vector schemas, implementing Redis caching and session locking, containerizing services. |
+| **Applied & Experimental**<br/>*(Active Projects & Pipelines)* | `LangGraph`, `LangChain`, `WebRTC`, `Deepgram STT`, `ElevenLabs TTS`, `OpenAI / Anthropic APIs`, `MongoDB`, `Nginx`, `Pydantic` | Constructing cyclic agent state graphs, integrating real-time audio and STT/TTS streams, configuring reverse proxy routing, validating structured schemas. |
+| **Familiarity & Continuous Learning**<br/>*(Architectural Study)* | `Go (Golang)`, `Kafka`, `Kubernetes (EKS)`, `Cross-Encoder Rerankers`, `Distributed Consensus Patterns` | Exploring high-throughput message brokers, orchestrating containerized microservices, studying advanced ranking functions and consensus mechanics. |
 
 ---
 
 ## 🚀 Featured Engineering Case Studies
 
-### 01. VoiceStream: Spectral Sub-500ms Turnaround Voice Engine
-* **The Problem:** Traditional conversational AI stacks introduce 1,500ms–2,500ms lag across STT, inference, and TTS hops, creating disjointed human dialogue.
-* **Architectural Strategy:** Re-engineered the voice pipeline from HTTP polling to a full-duplex WebRTC 48kHz audio stream. Utilized Silero VAD with 30ms sliding frames, coupled to Deepgram Nova-2 for 140ms interim token streaming, streamed directly into Claude 3.5 Sonnet SSE and buffered through ElevenLabs Turbo v2 with an audio circular ring buffer.
-* **Measured Production Impact:**
-  * **Turnaround Latency:** `430ms` glass-to-glass (sub-500ms SLA achieved).
-  * **Jitter Control:** Maintained `1.2ms` WebRTC jitter buffer with active drift compensation.
-  * **Interruption Latency:** `<60ms` audio cut-off response on barge-in.
-
-### 02. Enterprise Multi-Tenant Hybrid RAG Cognitive Engine
-* **The Problem:** Enterprise compliance engines required retrieval over 2.4M+ regulatory and financial artifacts with zero tolerance for hallucinations and total multi-tenant data boundaries.
-* **Architectural Strategy:** Architected a hybrid two-stage retrieval pipeline combining `pgvector` HNSW dense vector indexing with PostgreSQL GIN BM25 full-text indexing, merged through Reciprocal Rank Fusion (RRF) and validated via Cohere Rerank v3 cross-encoders. Every response enforces schema-validated source citation grounding.
-* **Measured Production Impact:**
-  * **Scale:** `2.4M+` indexed documents with sub-120ms p95 retrieval latency.
-  * **Accuracy:** `99.4%` source provenance verification with a measured `0.02%` hallucination rate.
-  * **Security:** Cryptographic tenant boundary isolation via PostgreSQL Row-Level Security (RLS).
-
-### 03. OmniChannel Autonomous Agent CRM with Distributed Checkpointing
-* **The Problem:** Multi-channel customer interactions (WhatsApp Cloud API, Web Chat) suffered from state drift, out-of-order webhook delivery, and stochastic agent looping during complex intent triage.
-* **Architectural Strategy:** Constructed a deterministic state-graph engine using LangGraph with Redis snapshot checkpointing. Integrated cryptographic HMAC webhook verification, Redis distributed locks for idempotency, and automated confidence-gated human-in-the-loop (HITL) escalation.
-* **Measured Production Impact:**
-  * **Throughput:** `10,000+` daily automated multi-step conversations with zero dropped states.
-  * **Efficiency:** `-72%` first-response latency; `+28.4%` qualified lead conversion lift.
-  * **Reliability:** 100% replayability for failed webhook events with zero duplicate triggers.
-
-### 04. Systems Engineering Journal & Knowledge Portal
-* **The Problem:** Technical content platforms often suffer from rigid CMS architectures that fail to provide real-time vector search and machine-readable data feeds for modern AI web scrapers and LLM context consumers.
-* **Architectural Strategy:** Built a high-velocity headless publishing portal with MongoDB persistence, sub-50ms REST APIs, complete `llms.txt` indexing compliance, deep semantic search endpoints, and edge caching.
-* **Measured Production Impact:**
-  * **Performance:** 100/100 Google Lighthouse across Performance, Best Practices, and Accessibility.
-  * **Agent Indexing:** Sub-50ms TTFB globally with native support for autonomous agent ingestion.
+### 01. Real-Time Voice AI Pipeline with Streaming STT and TTS
+* **Problem:** Conversational voice interfaces fail when conversational lag exceeds human conversational tolerance (typically >700–1000ms), or when users cannot interrupt the agent mid-sentence.
+* **Architecture & Design Decisions:**
+  * Replaced sequential request-response cycles with an asynchronous streaming pipeline over WebRTC.
+  * Audio is sliced into 20–30ms PCM frames, processed by Voice Activity Detection (Silero VAD), and streamed into Deepgram for low-latency interim speech recognition.
+  * Interim tokens stream into Claude / GPT models via Server-Sent Events (SSE); the first sentence boundaries trigger streaming text-to-speech (TTS) synthesis immediately.
+* **Personal Contribution:** Architected the Python backend orchestrator, configured WebRTC media handlers, implemented sliding-window audio buffering, and built the cancellation event loop for instant barge-in support.
+* **Tech Stack:** `Python`, `FastAPI`, `WebRTC`, `Deepgram API`, `Anthropic / OpenAI API`, `ElevenLabs API`, `Docker`.
+* **Testing & Limitations:** Benchmarked locally and in staging environments for streaming stability. *Known Limitation:* Total latency fluctuates based on network jitter and third-party inference turnaround; fallback mechanisms handle connection degradation gracefully.
 
 ---
 
-## 💡 Engineering Principles & Invariants
+### 02. Multi-Tenant Hybrid RAG with Retrieval and Citation Validation
+* **Problem:** Enterprise knowledge systems require strict tenant isolation and reliable document grounding; standard vector search alone frequently misses exact code identifiers or returns irrelevant chunks for complex queries.
+* **Architecture & Design Decisions:**
+  * Implemented a hybrid retrieval architecture combining `pgvector` (HNSW indexing) for semantic search with PostgreSQL native full-text search (`tsvector` + GIN indexing) for exact lexical matches.
+  * Combined candidate documents using Reciprocal Rank Fusion (RRF) and applied a cross-encoder model to re-score top results before context injection.
+  * Enforced multi-tenant isolation at the database layer using PostgreSQL Row-Level Security (RLS) linked to authenticated tenant contexts.
+* **Personal Contribution:** Designed the PostgreSQL schema, tuned vector index parameters (HNSW `m` and `ef_construction`), developed chunking and embedding pipelines, and implemented strict source-citation prompt templates with validation checks.
+* **Tech Stack:** `Python`, `FastAPI`, `PostgreSQL`, `pgvector`, `Cohere Rerank / Cross-Encoder`, `LangChain`, `Pydantic`.
+* **Testing & Limitations:** Tested across diverse technical document corpora. *Known Limitation:* While citation checks confirm that retrieved passages match generated text, human validation remains necessary for high-stakes regulatory decisions.
+
+---
+
+### 03. Omnichannel CRM Automation with Idempotent Webhooks
+* **Problem:** High-volume multi-channel communication (e.g., WhatsApp Cloud API, Web Chat) frequently encounters out-of-order deliveries, network retries, duplicate webhook notifications, and unexpected conversational branch failures.
+* **Architecture & Design Decisions:**
+  * Implemented cryptographic HMAC signature verification on all inbound webhooks to prevent spoofing.
+  * Built an idempotency layer using Redis distributed locks and unique message ID tracking with time-to-live (TTL) expiration to reject duplicate event deliveries safely.
+  * Structured conversation flows as deterministic directed state graphs (LangGraph) with Redis checkpointing, ensuring session state persists across server restarts.
+  * Added automated human-in-the-loop (HITL) routing when intent confidence falls below configured thresholds.
+* **Personal Contribution:** Engineered the webhook ingestion pipeline, implemented Redis idempotency guards, designed the conversational state graph, and integrated third-party messaging APIs.
+* **Tech Stack:** `Python`, `FastAPI`, `LangGraph`, `Redis`, `PostgreSQL`, `WhatsApp Cloud API`, `Docker`.
+* **Testing & Limitations:** Evaluated under burst webhook load scenarios. *Known Limitation:* Redis state caching requires regular persistence snapshots to PostgreSQL to prevent state loss during cache eviction.
+
+---
+
+### 04. Engineering Knowledge Portal with Search and Structured Content
+* **Problem:** Technical engineering articles and systems documentation require fast rendering, clean categorization, and machine-readable indexing for automated AI discovery.
+* **Architecture & Design Decisions:**
+  * Developed a decoupled architecture featuring an Express/Node.js API and dynamic document store paired with an optimized client interface.
+  * Structured data persistence in MongoDB with indexed queries and caching layers to minimize database round-trips.
+  * Integrated an `llms.txt` endpoint adhering to current standards for LLM search agents and automated context ingestion.
+  * Implemented structured metadata, OpenGraph cards, and accessible semantic HTML.
+* **Personal Contribution:** Built backend API endpoints, configured MongoDB database indexes, implemented telemetry and cookie consent controls, and designed machine-readable export formats.
+* **Tech Stack:** `Node.js`, `Express`, `MongoDB`, `React`, `TypeScript`, `Tailwind CSS`.
+* **Testing & Limitations:** Tested via automated unit test suites for consent lifecycle tracking and API response consistency. *Known Limitation:* Dynamic client rendering requires edge caching strategies to ensure optimal response times across global regions.
+
+---
+
+## 💡 Engineering Principles
 
 ```text
-1. DETERMINISTIC STATE GRAPHS OVER FREE-RUNNING LOOPS
-   In mission-critical agentic systems, open-ended autonomous loops invite non-deterministic
-   failures and runaway latency. Deterministic state charts (LangGraph) with strict schema
-   boundaries provide bounded execution paths, state persistence, and cost guarantees.
+1. EXPLICIT STATE BOUNDS OVER UNCHECKED LOOPS
+   In conversational and autonomous systems, free-running loops lead to non-deterministic
+   failures and unpredictable token usage. Deterministic state machines with explicit
+   branching and schema validation enforce bounded execution and reliable recovery.
 
-2. SUB-500MS IS AN INVIOLABLE SLA
-   Human conversation breaks when latency crosses half a second. Optimize every hop:
-   from audio slice framing, socket transport, and interim token processing to SSE streaming.
+2. MEASUREMENT-DRIVEN LATENCY OPTIMIZATION
+   Streaming responsiveness requires auditing each pipeline stage: audio framing, socket
+   transport, serialization, model time-to-first-token, and synthesis buffering.
+   Avoid optimizing one component while ignoring bottlenecks in another.
 
-3. UNGROUNDED GENERATION IS A SYSTEM DEFECT
-   In enterprise RAG, hallucination is not an acceptable statistical quirk. Enforce hybrid
-   retrieval (dense + lexical), re-ranking, and cryptographic citation provenance before
-   surfacing tokens to the user.
+3. EVIDENCE-BASED RAG GROUNDING & SAFE ABSTENTION
+   Reduce unsupported generation through hybrid retrieval, citation verification, and explicit
+   abstention policies. A system that acknowledges missing information is fundamentally
+   more valuable than one that invents plausible details.
 
-4. IDEMPOTENT BY DEFAULT, FAIL CLOSED
-   Every distributed event handler and webhook listener must be idempotent. Distributed
-   locks, transactional outbox patterns, and explicit state recovery guarantee consistency
-   across infrastructure restarts.
+4. IDEMPOTENT PROCESSING & RELIABLE STATE RECOVERY
+   Treat every inbound network event as potentially duplicated or delayed. Enforce
+   distributed deduplication keys, atomic state updates, and graceful fallback paths
+   across all asynchronous interfaces.
 ```
 
 ---
 
-## 📬 Contact & Advisory
+## 📬 Contact & Collaboration
 
-Available for high-impact engineering roles, distributed backend architecture advisory, and production AI system design.
+Open to technical discussions, backend engineering challenges, and systems architecture collaboration.
 
 <div align="center">
 
@@ -181,7 +206,7 @@ Available for high-impact engineering roles, distributed backend architecture ad
 &nbsp;
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Himanshu_Bharti-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/himanshu-bharti-81a5a618a)
 &nbsp;
-[![Email](https://img.shields.io/badge/Email_Me-hkbharti77%40gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:hkbharti77@gmail.com)
+[![Email](https://img.shields.io/badge/Email-hkbharti77%40gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:hkbharti77@gmail.com)
 
 <br/>
 
