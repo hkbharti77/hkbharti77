@@ -1,13 +1,13 @@
 <div align="center">
 
 # Himanshu Bharti
-### **Senior Systems & AI Engineer | Distributed Backend Architect**
+### **Systems & AI Engineer | Distributed Backend Architect**
 
 [![Portfolio](https://img.shields.io/badge/Architecture_Portfolio-hkbharti77.website-0F172A?style=for-the-badge&logo=googlechrome&logoColor=38BDF8)](https://hkbharti77.website)
 &nbsp;
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Himanshu_Bharti-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/himanshu-bharti-81a5a618a)
 &nbsp;
-[![Email](https://img.shields.io/badge/Direct_Contact-hello%40himanshubharti.dev-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:hello@himanshubharti.dev)
+[![Email](https://img.shields.io/badge/Direct_Contact-hkbharti77%40gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:hkbharti77@gmail.com)
 &nbsp;
 [![GitHub](https://img.shields.io/badge/GitHub-hkbharti77-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/hkbharti77)
 
@@ -27,13 +27,13 @@
 
 ## ⚡ Executive Profile
 
-I am a **Senior Systems & AI Engineer** focused on designing, deploying, and scaling resilient distributed backends, autonomous multi-agent state machines, and high-performance AI retrieval infrastructure.
+I am a **Systems & AI Engineer** focused on designing, deploying, and scaling resilient distributed backends, autonomous multi-agent state machines, and high-performance AI retrieval infrastructure.
 
 My engineering practice sits at the intersection of **low-latency systems programming** (sub-millisecond streaming protocols, audio buffering, concurrency economics) and **production GenAI systems** (state-graph orchestration, hybrid dense-sparse vector grounding, and deterministic guardrails).
 
 * **Architectural Focus:** Distributed event-driven systems, LangGraph deterministic state charts, WebRTC sub-500ms full-duplex voice pipelines, and multi-tenant RAG systems with verified citation provenance.
 * **Production Standards:** P99 latency SLA enforcement, strict schema validation (Pydantic / Zod), distributed idempotency locks, and zero-data-loss failover topologies.
-* **Current Engagement:** Senior Systems & AI Engineer — architecting enterprise automation platforms, conversational AI pipelines, and high-scale multi-tenant SaaS engines.
+* **Current Engagement:** Systems & AI Engineer — architecting enterprise automation platforms, conversational AI pipelines, and high-scale multi-tenant SaaS engines.
 * **Portfolio & Writing:** [hkbharti77.website](https://hkbharti77.website)
 
 ---
@@ -173,7 +173,7 @@ flowchart TD
 
 ## 📬 Contact & Advisory
 
-Available for high-impact senior engineering roles, distributed backend architecture advisory, and production AI system design.
+Available for high-impact engineering roles, distributed backend architecture advisory, and production AI system design.
 
 <div align="center">
 
@@ -181,7 +181,7 @@ Available for high-impact senior engineering roles, distributed backend architec
 &nbsp;
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Himanshu_Bharti-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/himanshu-bharti-81a5a618a)
 &nbsp;
-[![Email](https://img.shields.io/badge/Email_Me-hello%40himanshubharti.dev-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:hello@himanshubharti.dev)
+[![Email](https://img.shields.io/badge/Email_Me-hkbharti77%40gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:hkbharti77@gmail.com)
 
 <br/>
 
